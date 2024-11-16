@@ -1,6 +1,6 @@
 import { PhoneCall, Globe, Mail } from 'lucide-react';
 import Image from "next/image";
-import profileImage from "../../public/images/1.jpg";
+import profileImage from "../../public/images/profile-picture.png";
 import linkedinIcon from "../../public/icons/linkedin-app-white-icon.svg"
 import githubIcon from "../../public/icons/icons8-github.svg"
 import {skills, socialMedia} from "../../data/data";
@@ -13,8 +13,8 @@ export default function Home() {
     <div className="text-white">
       <main className="w-full">
         <section className='bg-[#004581] w-full flex flex-col items-center'>
-          <div className='w-3/4 max-w-screen-md py-20'>
-            <div className="w-full flex relative">
+          <div className='w-3/4 max-w-screen-md pt-20 pb-5'>
+            <div className="w-full flex">
               <div className="w-full flex flex-col">
                 <h1 className="text-4xl font-bold">Hi, I&apos;m <text className='text-[#facc15]'>Camilo</text><br />a Frontend Developer</h1>
                 <div className='my-2 flex gap-2 items-center'>
@@ -31,7 +31,7 @@ export default function Home() {
                   <ul className="flex gap-1 flex-wrap w-full">
                     { skills.map((skill, index) => (
                       <li key={index}>
-                        <span className="inline-flex items-center rounded-full bg-gray-700 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
+                        <span className="inline-flex items-center rounded-full bg-gray-600 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
                           {skill}
                         </span>
                       </li>
@@ -39,8 +39,8 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-    
-              <Image src={profileImage} alt="foto-perfil" width={300} height={100} className="profile--photo h-full" />
+
+                <Image src={profileImage} alt="foto-perfil" width={300} height={100} className="profile--photo h-full w-full self-center"/>
 
             </div>
 
@@ -73,9 +73,10 @@ export default function Home() {
         </section>
 
         <section className='projects--container w-full flex justify-center'>
-          <div className='flex flex-col justify-center items-center w-3/4 max-w-screen-md py-10 gap-5'>
+          <div className='flex flex-col justify-center items-center w-3/4 max-w-screen-lg py-10 gap-5'>
             <h2 className='text-4xl font-bold text-gray-700 bg-gray-300/50 backdrop-blur-sm py-1 px-3 rounded-md'>The best of my work</h2>
             <div className='flex gap-5 flex-wrap justify-center items-center'>
+              <div className='w-[300px] h-[400px] bg-black'></div>
               <div className='w-[300px] h-[400px] bg-black'></div>
               <div className='w-[300px] h-[400px] bg-black'></div>
             </div>

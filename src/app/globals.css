@@ -21,7 +21,7 @@ body {
 }
 
 .profile--photo {
-  @apply aspect-[375/665]
+  aspect-ratio: 292/343;
 }
 
 .projects--container {
