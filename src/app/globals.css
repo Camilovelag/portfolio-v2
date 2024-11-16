@@ -23,3 +23,10 @@ body {
 .profile--photo {
   @apply aspect-[375/665]
 }
+
+.projects--container {
+  background-image: url("../../public/images/howls-castle.gif");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: fit-content;
+}

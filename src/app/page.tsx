@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="bg-[#1a1e36] text-white flex flex-col items-center">
 
-      <main className="w-3/4 max-w-screen-md py-20">
-        <section>
+      <main className="w-full flex flex-col items-center">
+        <section className='w-3/4 max-w-screen-md py-20'>
           <div className="w-full flex relative">
             <div className="w-full flex flex-col">
               <h1 className="text-4xl font-bold">Hi, I&apos;m <text className='text-[#facc15]'>Camilo</text><br />a Frontend Developer</h1>
@@ -70,6 +70,17 @@ optio, eaque rerum! </p>
               </li>
           </ul>
 
+        </section>
+
+        <section className='projects--container w-full flex justify-center'>
+          <div className='flex flex-col justify-center items-center w-3/4 max-w-screen-md py-10 bg-gray-600/50 gap-5'>
+            <h2 className='text-4xl font-bold self-start'>The best of my work</h2>
+            <div className='flex gap-x-5'>
+              <div className='w-96 h-[200px] bg-black'></div>
+              <div className='w-96 h-[200px] bg-black'></div>
+              <div className='w-96 h-[200px] bg-black'></div>
+            </div>
+          </div>
         </section>
       </main>
 
