@@ -15,14 +15,14 @@ export default function Home() {
       <main className="w-3/4 max-w-screen-md py-20">
         <section>
           <div className="w-full flex relative">
-            <div className="w-2/3 flex flex-col z-1">
+            <div className="w-full flex flex-col">
               <h1 className="text-4xl font-bold">Hi, I&apos;m <text className='text-[#facc15]'>Camilo</text><br />a Frontend Developer</h1>
               <div className='my-2 flex gap-2 items-center'>
                 <Globe />
                 <p className="text-sm">Bogotá, Colombia</p>
               </div>
 
-              <p className="my-10 backdrop-blur-sm bg-gray-800/50 z-10 px-3 py-1">[Here comes some text introducing yourself (brief)].Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+              <p className="my-10">[Here comes some text introducing yourself (brief)].Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
 optio, eaque rerum! </p>
@@ -40,7 +40,7 @@ optio, eaque rerum! </p>
               </div>
             </div>
   
-            <Image src={profileImage} alt="foto-perfil" width={300} height={100} className="profile--photo h-full object-contain absolute right-0" />
+            <Image src={profileImage} alt="foto-perfil" width={300} height={100} className="profile--photo h-full" />
 
           </div>
 
