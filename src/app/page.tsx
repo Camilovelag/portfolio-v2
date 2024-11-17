@@ -3,12 +3,10 @@ import Image from "next/image";
 import profileImage from "../../public/images/profile-picture.png";
 import linkedinIcon from "../../public/icons/linkedin-app-white-icon.svg"
 import githubIcon from "../../public/icons/icons8-github.svg"
-import {skills, socialMedia} from "../../data/data";
+import {jobs, skills, socialMedia} from "../data/data";
+import DaneIcon from "../../public/icons/linkedin-app-white-icon.svg";
 
 export default function Home() {
-
-  console.log(skills);
-
   return (
     <div className="text-white">
       <main className="w-full">
@@ -16,7 +14,7 @@ export default function Home() {
           <div className='w-3/4 max-w-screen-md pt-20 pb-5'>
             <div className="w-full flex">
               <div className="w-full flex flex-col">
-                <h1 className="text-4xl font-bold">Hi, I&apos;m <text className='text-[#facc15]'>Camilo</text><br />a Frontend Developer</h1>
+                <h1 className="text-4xl font-bold">Hi, I&apos;m <p className='text-[#facc15]'>Camilo</p><br />a Frontend Developer</h1>
                 <div className='my-2 flex gap-2 items-center'>
                   <Globe />
                   <p className="text-sm">Bogotá, Colombia</p>
@@ -84,12 +82,42 @@ export default function Home() {
         </section>
 
         <section className='w-full flex'>
-          <div className='w-1/2 h-[400px] bg-[#dde8f0] py-5 px-10 text-gray-700'>
-            <h2 className='text-4xl font-bold self-start'>My background</h2>
+          <div className='w-1/2 h-[400px] bg-[#dde8f0] py-10 pl-20 pr-10 text-gray-700'>
+            <h2 className='text-4xl font-bold self-start mb-5'>My background</h2>
+            <ul>
+              { jobs.map((job, index) => (
+                <li key={index}>
+                  <div className="flex gap-5">
+                    <Image src={DaneIcon} alt="dane-icon" width={50} height={50}/>
+
+                    <div>
+                      <h4 className="font-bold text-xl">{job.position}</h4>
+                      <h4 className="">{job.company}<br />({job.type})</h4>
+                      <p className="text-gray-500 text-sm">{job.startDate} - {job.endDate} ({job.duration})<br />{job.location}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className='w-1/2 h-[400px] bg-[#97cbdc]'>
-            <h2 className='text-4xl font-bold self-start'>Studies</h2>
+          <div className='w-1/2 h-[400px] bg-[#97cbdc] py-10 pr-20 pl-10 text-gray-700'>
+            <h2 className='text-4xl font-bold self-start mb-5'>Studies</h2>
+            <ul>
+              { jobs.map((job, index) => (
+                <li key={index}>
+                  <div className="flex gap-5">
+                    <Image src={DaneIcon} alt="dane-icon" width={50} height={50}/>
+
+                    <div>
+                      <h4 className="font-bold text-xl">{job.position}</h4>
+                      <h4 className="">{job.company}<br />({job.type})</h4>
+                      <p className="text-gray-500 text-sm">{job.startDate} - {job.endDate} ({job.duration})<br />{job.location}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
         </section>
