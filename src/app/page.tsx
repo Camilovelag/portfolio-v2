@@ -3,8 +3,9 @@ import Image from "next/image";
 import profileImage from "../../public/images/profile-picture.png";
 import linkedinIcon from "../../public/icons/linkedin-app-white-icon.svg"
 import githubIcon from "../../public/icons/icons8-github.svg"
-import {jobs, skills, socialMedia} from "../data/data";
-import DaneIcon from "../../public/icons/linkedin-app-white-icon.svg";
+import {jobs, skills, socialMedia, studies} from "../data/data";
+import DaneIcon from "../../public/icons/dane-icon.svg";
+import UnalIcon from "../../public/icons/Logotipo_de_la_Universidad_Nacional_de_Colombia.svg"
 
 export default function Home() {
   return (
@@ -82,18 +83,27 @@ export default function Home() {
         </section>
 
         <section className='w-full flex'>
-          <div className='w-1/2 h-[400px] bg-[#dde8f0] py-10 pl-20 pr-10 text-gray-700'>
+          <div className='w-1/2 bg-[#dde8f0] py-10 pl-20 pr-10 text-gray-700'>
             <h2 className='text-4xl font-bold self-start mb-5'>My background</h2>
-            <ul>
+            <ul className='flex gap-3 flex-col'>
               { jobs.map((job, index) => (
                 <li key={index}>
                   <div className="flex gap-5">
-                    <Image src={DaneIcon} alt="dane-icon" width={50} height={50}/>
+                    <Image src={DaneIcon} alt="dane-icon" width={100} height={50}/>
 
                     <div>
                       <h4 className="font-bold text-xl">{job.position}</h4>
                       <h4 className="">{job.company}<br />({job.type})</h4>
                       <p className="text-gray-500 text-sm">{job.startDate} - {job.endDate} ({job.duration})<br />{job.location}</p>
+                      <ul className="flex gap-1 flex-wrap w-full">
+                        { job.skills.map((skill, index) => (
+                          <li key={index}>
+                            <span className="inline-flex items-center rounded-full bg-gray-600 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
+                              {skill}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -101,18 +111,27 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className='w-1/2 h-[400px] bg-[#97cbdc] py-10 pr-20 pl-10 text-gray-700'>
+          <div className='w-1/2 bg-[#97cbdc] py-10 pr-20 pl-10 text-gray-700'>
             <h2 className='text-4xl font-bold self-start mb-5'>Studies</h2>
-            <ul>
-              { jobs.map((job, index) => (
+            <ul className='flex gap-3 flex-col'>
+              { studies.map((study, index) => (
                 <li key={index}>
                   <div className="flex gap-5">
-                    <Image src={DaneIcon} alt="dane-icon" width={50} height={50}/>
+                    <Image src={UnalIcon} alt="dane-icon" width={100} height={50}/>
 
                     <div>
-                      <h4 className="font-bold text-xl">{job.position}</h4>
-                      <h4 className="">{job.company}<br />({job.type})</h4>
-                      <p className="text-gray-500 text-sm">{job.startDate} - {job.endDate} ({job.duration})<br />{job.location}</p>
+                      <h4 className="font-bold text-xl">{study.institution}</h4>
+                      <h4 className="">{study.degreeTitle}</h4>
+                      <p className="text-gray-500 text-sm">{study.dates}<br />{study.location}</p>
+                      {/* <ul className="flex gap-1 flex-wrap w-full">
+                        { study.skills.map((skill, index) => (
+                          <li key={index}>
+                            <span className="inline-flex items-center rounded-full bg-gray-600 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
+                              {skill}
+                            </span>
+                          </li>
+                        ))}
+                      </ul> */}
                     </div>
                   </div>
                 </li>
