@@ -8,6 +8,8 @@ import {jobs, skills, socialMedia, studies} from "../data/data";
 import DaneIcon from "../../public/icons/dane-icon.svg";
 import UnalIcon from "../../public/icons/Logotipo_de_la_Universidad_Nacional_de_Colombia.svg";
 
+import Projects from "@/components/projects";
+
 export default function Home() {
   return (
     <div className="text-white">
@@ -95,11 +97,12 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-gray-700 bg-gray-300/50 backdrop-blur-sm py-1 px-3 rounded-md">
               The best of my work
             </h2>
-            <div className="flex gap-5 flex-wrap justify-center items-center">
+            {/* <div className="flex gap-5 flex-wrap justify-center items-center">
               <div className="w-[300px] h-[400px] bg-black" />
               <div className="w-[300px] h-[400px] bg-black" />
               <div className="w-[300px] h-[400px] bg-black" />
-            </div>
+            </div> */}
+            <Projects />
           </div>
         </section>
 
@@ -122,15 +125,6 @@ export default function Home() {
                         {job.startDate} - {job.endDate} ({job.duration})<br />
                         {job.location}
                       </p>
-                      <ul className="flex gap-1 flex-wrap w-full">
-                        {job.skills.map((skill, index) => (
-                          <li key={index}>
-                            <span className="inline-flex items-center rounded-full bg-gray-600 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
-                              {skill}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
                 </li>
@@ -154,15 +148,6 @@ export default function Home() {
                         <br />
                         {study.location}
                       </p>
-                      {/* <ul className="flex gap-1 flex-wrap w-full">
-                        { study.skills.map((skill, index) => (
-                          <li key={index}>
-                            <span className="inline-flex items-center rounded-full bg-gray-600 px-3 py-1 text-xs font-bold text-white ring-1 ring-inset ring-blue-700/10">
-                              {skill}
-                            </span>
-                          </li>
-                        ))}
-                      </ul> */}
                     </div>
                   </div>
                 </li>
