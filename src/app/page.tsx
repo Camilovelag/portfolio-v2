@@ -93,16 +93,14 @@ export default function Home() {
         </section>
 
         <section className="projects--container w-full flex justify-center">
-          <div className="flex flex-col justify-center items-center w-3/4 max-w-screen-lg py-10 gap-5">
+          <div className="flex flex-col justify-center items-center w-full max-w-screen-xl py-10 gap-5">
             <h2 className="text-4xl font-bold text-gray-700 bg-gray-300/50 backdrop-blur-sm py-1 px-3 rounded-md">
               The best of my work
             </h2>
-            {/* <div className="flex gap-5 flex-wrap justify-center items-center">
-              <div className="w-[300px] h-[400px] bg-black" />
-              <div className="w-[300px] h-[400px] bg-black" />
-              <div className="w-[300px] h-[400px] bg-black" />
-            </div> */}
             <Projects />
+            {/* <button className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              Watch more projects...
+            </button> */}
           </div>
         </section>
 

@@ -17,6 +17,10 @@ body {
   height: fit-content;
 }
 
+/* .project--image {
+  @apply w-full aspect-[10/7] object-cover h-full;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
