@@ -114,7 +114,7 @@ export default function Home() {
         </section>
 
         <section className="w-full flex">
-          <div className="w-1/2 bg-[#dde8f0] py-10 pl-20 pr-10 text-gray-700">
+          <div className="w-1/2 bg-[#018abd] py-10 pl-20 pr-10">
             <h2 className="text-4xl font-bold self-start mb-5">My background</h2>
             <ul className="flex gap-3 flex-col">
               {jobs.map((job, index) => (
@@ -124,11 +124,11 @@ export default function Home() {
 
                     <div>
                       <h4 className="font-bold text-xl">{job.position}</h4>
-                      <h4 className="">
+                      <h4 className="italic">
                         {job.company}
                         <br />({job.type})
                       </h4>
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-sm">
                         {job.startDate} - {job.endDate} ({job.duration})<br />
                         {job.location}
                       </p>
@@ -150,7 +150,7 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-xl">{study.institution}</h4>
                       <h4 className="">{study.degreeTitle}</h4>
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-gray-800 text-sm">
                         {study.dates}
                         <br />
                         {study.location}
@@ -163,8 +163,62 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-[400px] bg-[#018abd]">
-          <h2 className="text-4xl font-bold self-start">Reach me out</h2>
+        <section className="bg-[#dde8f0] text-gray-800 w-full flex flex-col items-center">
+          <div className="w-3/4 max-w-screen-md pt-16 pb-5">
+            <h2 className="text-4xl font-bold text-center">Did you love what you saw???</h2>
+            <p className="text-center text-xl">I have a last message for you.</p>
+            <div className="flex pt-5 pb-16">
+              <iframe
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="w-2/3"
+                frameBorder="0"
+                height="315"
+                referrerPolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/1_O_T6Aq85E?si=RLrs1mMrvmJonQBS"
+                title="YouTube video player"
+                width="560"
+              />
+              <ul className="flex justify-center gap-3 px-5 w-1/3 items-start py-10 flex-col">
+                <li className="flex gap-2">
+                  <Mail />
+                  <span className="inline-flex items-center text-sm">
+                    {socialMedia.email.content}
+                  </span>
+                </li>
+
+                <li className="flex gap-2">
+                  <PhoneCall />
+                  <span className="inline-flex items-center text-sm">
+                    {socialMedia.phone.content}
+                  </span>
+                </li>
+
+                <li className="flex gap-2">
+                  <Image
+                    alt="linkedin-icon"
+                    height={24}
+                    src="/icons/linkedin-app-white-icon.svg"
+                    width={24}
+                  />
+                  <a href={socialMedia.linkedin.link} rel="noreferrer" target="_blank">
+                    <span className="inline-flex items-center text-sm">
+                      {socialMedia.linkedin.content}
+                    </span>
+                  </a>
+                </li>
+
+                <li className="flex gap-2">
+                  <Image alt="github-icon" height={24} src="/icons/icons8-github.svg" width={24} />
+                  <a href={socialMedia.github.link} rel="noreferrer" target="_blank">
+                    <span className="inline-flex items-center text-sm">
+                      {socialMedia.github.content}
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
 
