@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import projectImage from "../../public/images/project-1.jpg";
-
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
 const skills = ["JavaScript", "TypeScript", "Responsive Design", "NextJs", "Joomla"];
@@ -15,7 +13,7 @@ const Projects = () => {
             alt="foto-perfil"
             className="w-full aspect-[10/7] object-cover h-full"
             height={100}
-            src={projectImage}
+            src="/images/project-1.jpg"
             width={100}
           />
           <div className="absolute bottom-0 backdrop-blur-sm py-2 px-5 bg-gray-500/50 text-white rounded-sm">

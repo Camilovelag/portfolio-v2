@@ -33,7 +33,7 @@ const jobs = [
   {
     position: "Frontend Developer",
     company: "Departamento Administrativo Nacional de Estadística - DANE Colombia",
-    companyLogo: "../../public/icons/dane-icon.svg",
+    companyLogo: "/icons/dane-icon.svg",
     type: "Contractor, Full-time",
     startDate: "Apr 2024",
     endDate: "Present",
@@ -44,7 +44,7 @@ const jobs = [
   {
     position: "Frontend Developer",
     company: "Departamento Administrativo Nacional de Estadística - DANE Colombia",
-    companyLogo: "../../public/icons/dane-icon.svg",
+    companyLogo: "/icons/dane-icon.svg",
     type: "Contractor, Full-time",
     startDate: "Sep 2023",
     endDate: "Jan 2024",
@@ -57,6 +57,7 @@ const jobs = [
 const studies = [
   {
     institution: "Microverse",
+    institutionLogo: "/icons/microverse-logo.png",
     degreeTitle: "Full-Stack Web Developer, Software Development",
     dates: "2022 - 2023",
     location: "San Francisco, USA (Remote)",
@@ -74,6 +75,7 @@ const studies = [
   },
   {
     institution: "Universidad Nacional de Colombia",
+    institutionLogo: "/icons/Logotipo_de_la_Universidad_Nacional_de_Colombia.svg",
     degreeTitle: "Chemical Engineering",
     dates: "2010 - 2020",
     location: "Bogotá, Colombia",

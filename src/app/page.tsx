@@ -1,12 +1,7 @@
 import {PhoneCall, Globe, Mail} from "lucide-react";
 import Image from "next/image";
 
-import profileImage from "../../public/images/profile-picture.png";
-import linkedinIcon from "../../public/icons/linkedin-app-white-icon.svg";
-import githubIcon from "../../public/icons/icons8-github.svg";
 import {jobs, skills, socialMedia, studies} from "../data/data";
-import DaneIcon from "../../public/icons/dane-icon.svg";
-import UnalIcon from "../../public/icons/Logotipo_de_la_Universidad_Nacional_de_Colombia.svg";
 
 import Projects from "@/components/projects";
 
@@ -15,12 +10,14 @@ export default function Home() {
     <div className="text-white">
       <main className="w-full">
         <section className="bg-[#004581] w-full flex flex-col items-center">
-          <div className="w-3/4 max-w-screen-md pt-20 pb-5">
+          <div className="w-3/4 max-w-screen-md pt-16 pb-5">
             <div className="w-full flex">
               <div className="w-full flex flex-col">
                 <h1 className="text-4xl font-bold">
-                  Hi, I&apos;m <p className="text-[#facc15]">Camilo</p>
-                  <br />a Frontend Developer
+                  {`Hi, I'm `}
+                  <strong className="text-[#facc15]">Camilo</strong>
+                  <br />
+                  {" a Frontend Developer"}
                 </h1>
                 <div className="my-2 flex gap-2 items-center">
                   <Globe />
@@ -49,9 +46,9 @@ export default function Home() {
 
               <Image
                 alt="foto-perfil"
-                className="profile--photo h-full w-full self-center"
+                className="profile--photo h-full w-full self-center aspect-[292/343]"
                 height={100}
-                src={profileImage}
+                src="/images/profile-picture.png"
                 width={300}
               />
             </div>
@@ -72,7 +69,12 @@ export default function Home() {
               </li>
 
               <li className="flex gap-2">
-                <Image alt="linkedin-icon" height={24} src={linkedinIcon} width={24} />
+                <Image
+                  alt="linkedin-icon"
+                  height={24}
+                  src="/icons/linkedin-app-white-icon.svg"
+                  width={24}
+                />
                 <a href={socialMedia.linkedin.link} rel="noreferrer" target="_blank">
                   <span className="inline-flex items-center text-sm">
                     {socialMedia.linkedin.content}
@@ -81,7 +83,7 @@ export default function Home() {
               </li>
 
               <li className="flex gap-2">
-                <Image alt="linkedin-icon" height={24} src={githubIcon} width={24} />
+                <Image alt="github-icon" height={24} src="/icons/icons8-github.svg" width={24} />
                 <a href={socialMedia.github.link} rel="noreferrer" target="_blank">
                   <span className="inline-flex items-center text-sm">
                     {socialMedia.github.content}
@@ -92,11 +94,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="projects--container w-full flex justify-center">
-          <div className="flex flex-col justify-center items-center w-full max-w-screen-xl py-10 gap-5">
-            <h2 className="text-4xl font-bold text-gray-700 bg-gray-300/50 backdrop-blur-sm py-1 px-3 rounded-md">
-              The best of my work
-            </h2>
+        <section className="projects--container w-full flex justify-center relative isolate">
+          <Image
+            unoptimized
+            alt="dane-icon"
+            className="w-full h-full absolute opacity-50"
+            height={50}
+            src="/images/howls-castle.gif"
+            width={100}
+          />
+
+          <div className="flex flex-col justify-center items-center w-full max-w-screen-xl py-10 gap-5 z-10">
+            <h2 className="text-4xl font-bold text-gray-700">The best of my work</h2>
             <Projects />
             {/* <button className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
               Watch more projects...
@@ -111,7 +120,7 @@ export default function Home() {
               {jobs.map((job, index) => (
                 <li key={index}>
                   <div className="flex gap-5">
-                    <Image alt="dane-icon" height={50} src={DaneIcon} width={100} />
+                    <Image alt="dane-icon" height={60} src={job.companyLogo} width={80} />
 
                     <div>
                       <h4 className="font-bold text-xl">{job.position}</h4>
@@ -136,7 +145,7 @@ export default function Home() {
               {studies.map((study, index) => (
                 <li key={index}>
                   <div className="flex gap-5">
-                    <Image alt="dane-icon" height={50} src={UnalIcon} width={100} />
+                    <Image alt="dane-icon" height={60} src={study.institutionLogo} width={80} />
 
                     <div>
                       <h4 className="font-bold text-xl">{study.institution}</h4>
