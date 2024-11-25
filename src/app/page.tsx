@@ -169,10 +169,9 @@ export default function Home() {
             <p className="text-center text-xl">I have a last message for you.</p>
             <div className="flex pt-5 pb-16">
               <iframe
-                allowfullscreen
+                allowFullScreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 className="w-2/3"
-                frameBorder="0"
                 height="315"
                 referrerPolicy="strict-origin-when-cross-origin"
                 src="https://www.youtube.com/embed/1_O_T6Aq85E?si=RLrs1mMrvmJonQBS"
